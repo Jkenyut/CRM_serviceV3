@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	//main
+	//main function
 	_ = godotenv.Load()
 	db := db2.GormMysql()
 	router := gin.New()

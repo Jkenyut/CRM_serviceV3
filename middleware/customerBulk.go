@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"crm_service/entity"
-	db2 "crm_service/utils/db"
+	"crm_serviceV3/entity"
+	db2 "crm_serviceV3/utils/db"
 	"encoding/json"
 	"github.com/gin-gonic/gin"
 	"github.com/vicanso/go-axios"

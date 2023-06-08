@@ -1,8 +1,8 @@
 package customer
 
 import (
-	"crm_service/dto"
-	"crm_service/entity"
+	"crm_serviceV3/dto"
+	"crm_serviceV3/entity"
 )
 
 type CustomerBody struct {

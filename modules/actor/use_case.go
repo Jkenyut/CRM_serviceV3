@@ -1,8 +1,8 @@
 package actor
 
 import (
-	"crm_service/entity"
-	"crm_service/repository"
+	"crm_serviceV3/entity"
+	"crm_serviceV3/repository"
 	"golang.org/x/crypto/bcrypt"
 )
 

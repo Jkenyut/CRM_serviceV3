@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"crm_service/entity"
+	"crm_serviceV3/entity"
 	"errors"
 	"fmt"
 	"gorm.io/gorm"

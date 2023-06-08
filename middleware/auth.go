@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"crm_service/dto"
+	"crm_serviceV3/dto"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"net/http"
