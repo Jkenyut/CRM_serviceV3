@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : mock and testing create and getactor by id">
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : mocks customer and test usecase_actor">
+      <change afterPath="$PROJECT_DIR$/modules/customer/use_case_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/actor/use_case_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/use_case_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/customer.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/customer.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,53 +91,41 @@
       <recent name="D:\INTERSHIP BRI\BOOTCAMP DIBIMBING GOLANG\crm_service\dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test actor">
-    <configuration name="TestActivateActorById in crm_serviceV3/modules/actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test customer">
+    <configuration name="TestDeleteCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="crm_serviceV3" />
-      <working_directory value="$PROJECT_DIR$/modules/actor" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="crm_serviceV3/modules/actor" />
+      <package value="crm_serviceV3/modules/customer" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestActivateActorById\E$" />
+      <pattern value="^\QTestDeleteCustomerById\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestDeactivateActorById in crm_serviceV3/modules/actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetAllCustomer in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="crm_serviceV3" />
-      <working_directory value="$PROJECT_DIR$/modules/actor" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="crm_serviceV3/modules/actor" />
+      <package value="crm_serviceV3/modules/customer" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestDeactivateActorById\E$" />
+      <pattern value="^\QTestGetAllCustomer\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestDeleteActorById in crm_serviceV3/modules/actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUpdateCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="crm_serviceV3" />
-      <working_directory value="$PROJECT_DIR$/modules/actor" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="crm_serviceV3/modules/actor" />
+      <package value="crm_serviceV3/modules/customer" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestDeleteActorById\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestLoginActor in crm_serviceV3/modules/actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="crm_serviceV3" />
-      <working_directory value="$PROJECT_DIR$/modules/actor" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="crm_serviceV3/modules/actor" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLoginActor\E$" />
+      <pattern value="^\QTestUpdateCustomerById\E$" />
       <method v="2" />
     </configuration>
     <configuration name="go test actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -151,13 +139,24 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="go test customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="crm_service" />
+      <directory value="$PROJECT_DIR$/modules/customer" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test customer" />
         <item itemvalue="Go Test.go test actor" />
-        <item itemvalue="Go Test.TestLoginActor in crm_serviceV3/modules/actor" />
-        <item itemvalue="Go Test.TestDeactivateActorById in crm_serviceV3/modules/actor" />
-        <item itemvalue="Go Test.TestActivateActorById in crm_serviceV3/modules/actor" />
-        <item itemvalue="Go Test.TestDeleteActorById in crm_serviceV3/modules/actor" />
+        <item itemvalue="Go Test.TestDeleteCustomerById in crm_serviceV3/modules/customer" />
+        <item itemvalue="Go Test.TestUpdateCustomerById in crm_serviceV3/modules/customer" />
+        <item itemvalue="Go Test.TestGetAllCustomer in crm_serviceV3/modules/customer" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +214,8 @@
     <MESSAGE value="fix : ignore" />
     <MESSAGE value="fix : dependenci" />
     <MESSAGE value="fix : mock and testing create and getactor by id" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : mock and testing create and getactor by id" />
+    <MESSAGE value="fix : mocks customer and test usecase_actor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : mocks customer and test usecase_actor" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

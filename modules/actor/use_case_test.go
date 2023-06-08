@@ -21,14 +21,14 @@ func TestCreateActor(t *testing.T) {
 
 	// Membuat actor body
 	actorBody := ActorBody{
-		Username: "john_doe",
+		Username: "superadmin",
 		Password: "password123",
 	}
 
 	// Membuat actor yang diharapkan sebagai hasil kembalian dari repository mock
 	expectedActor := entity.Actor{
 		ID:        1,
-		Username:  "john_doe",
+		Username:  "superadmin",
 		Password:  "hashed_password",
 		Verified:  "false",
 		Active:    "false",
@@ -62,7 +62,7 @@ func TestGetActorById(t *testing.T) {
 	// Membuat actor yang diharapkan sebagai hasil kembalian dari repository mock
 	expectedActor := entity.Actor{
 		ID:        1,
-		Username:  "john_doe",
+		Username:  "superadmin",
 		Password:  "hashed_password",
 		Verified:  "false",
 		Active:    "false",
