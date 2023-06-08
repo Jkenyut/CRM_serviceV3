@@ -8,6 +8,7 @@ import (
 	"math"
 )
 
+//go:generate mockery --name CustomerRepoInterface
 type CustomerRepoInterface interface {
 	CreateCustomer(customer *entity.Customer) (entity.Customer, error)
 	GetCustomerById(id uint) (entity.Customer, error)
