@@ -9,6 +9,7 @@ import (
 	"math"
 )
 
+//go:generate mockery --name ActorRepoInterface
 type ActorRepoInterface interface {
 	CreateActor(actor *entity.Actor) (entity.Actor, error)
 	GetActorById(id uint) (entity.Actor, error)
