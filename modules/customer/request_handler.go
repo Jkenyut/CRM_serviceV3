@@ -1,8 +1,8 @@
 package customer
 
 import (
-	"crm_service/dto"
-	"crm_service/repository"
+	"crm_serviceV3/dto"
+	"crm_serviceV3/repository"
 	"fmt"
 	"github.com/go-playground/validator/v10"
 	"net/http"

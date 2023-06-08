@@ -1,7 +1,7 @@
 package actor
 
 import (
-	"crm_service/middleware"
+	"crm_serviceV3/middleware"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )

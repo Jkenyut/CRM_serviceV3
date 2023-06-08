@@ -1,8 +1,8 @@
 package actor
 
 import (
-	"crm_service/dto"
-	"crm_service/entity"
+	"crm_serviceV3/dto"
+	"crm_serviceV3/entity"
 	"errors"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"

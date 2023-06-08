@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"crm_service/dto"
+	"crm_serviceV3/dto"
 	ratelimit "github.com/JGLTechnologies/gin-rate-limit"
 	"github.com/gin-gonic/gin"
 	"time"
