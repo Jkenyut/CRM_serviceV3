@@ -1,5 +1,6 @@
 package entity
 
+// register Approval
 type RegisterApproval struct {
 	ID           uint64 `gorm:"column:id;primaryKey;autoIncrement"`
 	AdminID      uint64 `gorm:"column:admin_id"`
@@ -7,6 +8,7 @@ type RegisterApproval struct {
 	Status       string `gorm:"column:status;default:deactivate;size:255"`
 }
 
+// Freeze Table Register-Approval
 func (RegisterApproval) TableName() string {
 	return "register_approval"
 }

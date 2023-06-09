@@ -1,5 +1,6 @@
 package dto
 
+// strcut Meta
 type ResponseMeta struct {
 	Success      bool   `json:"success"`
 	MessageTitle string `json:"messageTitle"`

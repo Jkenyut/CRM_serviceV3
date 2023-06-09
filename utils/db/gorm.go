@@ -9,10 +9,12 @@ import (
 	"time"
 )
 
+// func gorm mysql
 func GormMysql() *gorm.DB {
 	var db *gorm.DB
 	var err error
 
+	//lopping until db connect
 	for {
 		// Attempt to establish a database connection
 		db, err = connectToMySQL()
@@ -27,6 +29,7 @@ func GormMysql() *gorm.DB {
 	return db
 }
 
+// func connect mysql
 func connectToMySQL() (*gorm.DB, error) {
 	dsn := os.Getenv("CONNECT_DB") + os.Getenv("DB_HOST") + os.Getenv("CONNECT_DB_LAST")
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})

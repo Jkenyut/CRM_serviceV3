@@ -9,6 +9,8 @@ import (
 	"math"
 )
 
+// repository interface actor
+//
 //go:generate mockery --name ActorRepoInterface
 type ActorRepoInterface interface {
 	CreateActor(actor *entity.Actor) (entity.Actor, error)
@@ -21,10 +23,12 @@ type ActorRepoInterface interface {
 	LoginActor(actor *entity.Actor) (entity.Actor, error)
 }
 
+// actor struct
 type Actor struct {
 	db *gorm.DB
 }
 
+// new func new actor
 func NewActor(dbCrud *gorm.DB) Actor {
 	return Actor{
 		db: dbCrud,
@@ -32,6 +36,7 @@ func NewActor(dbCrud *gorm.DB) Actor {
 
 }
 
+// method create actor
 func (repo Actor) CreateActor(actor *entity.Actor) (entity.Actor, error) {
 	var existingActor entity.Actor
 
@@ -58,6 +63,7 @@ func (repo Actor) CreateActor(actor *entity.Actor) (entity.Actor, error) {
 	return *actor, nil
 }
 
+// method get actor by id
 func (repo Actor) GetActorById(id uint) (entity.Actor, error) {
 	var actor entity.Actor
 	err := repo.db.Omit("password").First(&actor, "id = ?", id).Error
@@ -67,6 +73,7 @@ func (repo Actor) GetActorById(id uint) (entity.Actor, error) {
 	return actor, nil
 }
 
+// method get all actor
 func (repo Actor) GetAllActor(page uint, username string) (uint, uint, int, uint, []entity.Actor, error) {
 	var actors []entity.Actor
 	var count int64
@@ -85,6 +92,7 @@ func (repo Actor) GetAllActor(page uint, username string) (uint, uint, int, uint
 	return page, limit, int(count), totalPages, actors, nil
 }
 
+// method update actor by id
 func (repo Actor) UpdateActorById(id uint, updateActor *entity.Actor) (entity.Actor, error) {
 	var findActorById entity.Actor
 	var existingActor entity.Actor
@@ -118,6 +126,7 @@ func (repo Actor) UpdateActorById(id uint, updateActor *entity.Actor) (entity.Ac
 	return findActorById, nil
 }
 
+// method delete actor by id
 func (repo Actor) DeleteActorById(id uint) error {
 	var actor entity.Actor
 	if id == 1 {
@@ -135,6 +144,7 @@ func (repo Actor) DeleteActorById(id uint) error {
 	return nil
 }
 
+// method activate actor by id
 func (repo Actor) ActivateActorById(id uint) error {
 	var actor entity.Actor
 	var register entity.RegisterApproval
@@ -157,6 +167,7 @@ func (repo Actor) ActivateActorById(id uint) error {
 	return nil
 }
 
+// method deactivate actor by id
 func (repo Actor) DeactivateActorById(id uint) error {
 	var actor entity.Actor
 	var register entity.RegisterApproval
@@ -182,6 +193,7 @@ func (repo Actor) DeactivateActorById(id uint) error {
 	return nil
 }
 
+// method login actor
 func (repo Actor) LoginActor(actor *entity.Actor) (entity.Actor, error) {
 	var existingActor entity.Actor
 

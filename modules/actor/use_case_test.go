@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// test create actor
 func TestCreateActor(t *testing.T) {
 	// Membuat instance mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -50,6 +51,7 @@ func TestCreateActor(t *testing.T) {
 	assert.Equal(t, expectedActor, createdActor)
 }
 
+// test get actor by id
 func TestGetActorById(t *testing.T) {
 	// Membuat instance mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -81,6 +83,7 @@ func TestGetActorById(t *testing.T) {
 	assert.Equal(t, expectedActor, actor)
 }
 
+// test get all actor
 func TestGetAllActor(t *testing.T) {
 	// Create an instance of the mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -119,6 +122,7 @@ func TestGetAllActor(t *testing.T) {
 	mockRepo.AssertExpectations(t)
 }
 
+// test update actor by id
 func TestUpdateActorById(t *testing.T) {
 	// Create an instance of the mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -163,6 +167,7 @@ func TestUpdateActorById(t *testing.T) {
 	mockRepo.AssertCalled(t, "UpdateActorById", uint(actorID), mock.AnythingOfType("*entity.Actor"))
 }
 
+// test delete actor by id
 func TestDeleteActorById(t *testing.T) {
 	// Create an instance of the mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -187,6 +192,8 @@ func TestDeleteActorById(t *testing.T) {
 	// Assert that the expected repository method was called with the correct argument
 	mockRepo.AssertCalled(t, "DeleteActorById", actorID)
 }
+
+// test activate actor by id
 func TestActivateActorById(t *testing.T) {
 	// Create an instance of the mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)
@@ -212,6 +219,7 @@ func TestActivateActorById(t *testing.T) {
 	mockRepo.AssertCalled(t, "ActivateActorById", actorID)
 }
 
+// test deactivate actor by id
 func TestDeactivateActorById(t *testing.T) {
 	// Create an instance of the mock ActorRepoInterface
 	mockRepo := new(mocks.ActorRepoInterface)

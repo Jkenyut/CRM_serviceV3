@@ -15,6 +15,7 @@ import (
 	"time"
 )
 
+// func main
 func main() {
 	//main function
 	_ = godotenv.Load()
@@ -29,6 +30,8 @@ func main() {
 	//if err != nil {
 	//	fmt.Println(err)
 	//}
+
+	//migrate
 	m := &migrate.FileMigrationSource{Dir: "."}
 	sql, _ := db.DB()
 	n, err := migrate.Exec(sql, "mysql", m, migrate.Up)
@@ -38,8 +41,13 @@ func main() {
 	fmt.Println(n)
 	router := gin.New()
 
+	//use cors
 	router.Use(cors.Default())
+
+	//use helmet
 	router.Use(helmet.Default())
+
+	//use rate-limit
 	store := ratelimit.InMemoryStore(&ratelimit.InMemoryOptions{
 		Rate:  time.Minute * 1,
 		Limit: 20,
@@ -48,6 +56,8 @@ func main() {
 		ErrorHandler: entity.ErrorHandler,
 		KeyFunc:      entity.KeyFunc,
 	})
+
+	//call all route
 	router.Use(mw)
 	actorHandler := actor.NewRouter(db)
 	actorHandler.Handle(router)
@@ -55,7 +65,7 @@ func main() {
 	customerHandler := customer.NewRouter(db)
 	customerHandler.Handle(router)
 
-	errRouter := router.Run(":8081")
+	errRouter := router.Run(":8081") // run gin
 	if errRouter != nil {
 		fmt.Println("error running server", errRouter)
 		return

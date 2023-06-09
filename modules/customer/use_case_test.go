@@ -8,6 +8,7 @@ import (
 	"testing"
 )
 
+// test create customer
 func TestCreateCustomer(t *testing.T) {
 	// Create an instance of the mock CustomerRepoInterface
 	mockRepo := new(mocks.CustomerRepoInterface)
@@ -46,6 +47,7 @@ func TestCreateCustomer(t *testing.T) {
 	mockRepo.AssertCalled(t, "CreateCustomer", mock.AnythingOfType("*entity.Customer"))
 }
 
+// etst get customer by id
 func TestGetCustomerById(t *testing.T) {
 	// Create an instance of the mock CustomerRepoInterface
 	mockRepo := new(mocks.CustomerRepoInterface)
@@ -80,6 +82,7 @@ func TestGetCustomerById(t *testing.T) {
 	mockRepo.AssertCalled(t, "GetCustomerById", id)
 }
 
+// test get all customer
 func TestGetAllCustomer(t *testing.T) {
 	// Create an instance of the mock CustomerRepoInterface
 	mockRepo := new(mocks.CustomerRepoInterface)
@@ -131,6 +134,8 @@ func TestGetAllCustomer(t *testing.T) {
 	// Assert that the expected repository method was called with the correct arguments
 	mockRepo.AssertCalled(t, "GetAllCustomer", page, username)
 }
+
+// test update customer by id
 func TestUpdateCustomerById(t *testing.T) {
 	// Create an instance of the mock CustomerRepoInterface
 	mockRepo := new(mocks.CustomerRepoInterface)
@@ -169,6 +174,7 @@ func TestUpdateCustomerById(t *testing.T) {
 	mockRepo.AssertCalled(t, "UpdateCustomerById", id, mock.AnythingOfType("*entity.Customer"))
 }
 
+// test delete customer by id
 func TestDeleteCustomerById(t *testing.T) {
 	// Create an instance of the mock CustomerRepoInterface
 	mockRepo := new(mocks.CustomerRepoInterface)

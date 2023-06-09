@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// interface controller customer
 type CustomerControllerInterface interface {
 	CreateCustomer(req CustomerBody) (any, error)
 	GetCustomerById(id uint) (FindCustomer, error)
@@ -16,10 +17,12 @@ type CustomerControllerInterface interface {
 	DeleteCustomerById(id uint) (dto.ResponseMeta, error)
 }
 
+// struct controller customer
 type customerControllerStruct struct {
 	customerUseCase UseCaseCustomerInterface
 }
 
+// method create customer
 func (c customerControllerStruct) CreateCustomer(req CustomerBody) (any, error) {
 	start := time.Now()
 	customer, err := c.customerUseCase.CreateCustomer(req)
@@ -44,6 +47,7 @@ func (c customerControllerStruct) CreateCustomer(req CustomerBody) (any, error) 
 	return res, nil
 }
 
+// method get customer by id
 func (c customerControllerStruct) GetCustomerById(id uint) (FindCustomer, error) {
 	start := time.Now()
 	var res FindCustomer
@@ -62,6 +66,7 @@ func (c customerControllerStruct) GetCustomerById(id uint) (FindCustomer, error)
 	return res, nil
 }
 
+// method get all customer
 func (c customerControllerStruct) GetAllCustomer(page uint, usernameStr string) (FindAllCustomer, error) {
 	start := time.Now()
 	page, perPage, total, totalPages, customerEntities, err := c.customerUseCase.GetAllCustomer(page, usernameStr)
@@ -92,6 +97,7 @@ func (c customerControllerStruct) GetAllCustomer(page uint, usernameStr string) 
 	return res, nil
 }
 
+// method get customer by id
 func (c customerControllerStruct) UpdateById(id uint, req UpdateCustomerBody) (FindCustomer, error) {
 	start := time.Now()
 	customer, err := c.customerUseCase.UpdateCustomerById(id, req)
@@ -111,6 +117,7 @@ func (c customerControllerStruct) UpdateById(id uint, req UpdateCustomerBody) (F
 	return res, nil
 }
 
+// method delete customer by id
 func (c customerControllerStruct) DeleteCustomerById(id uint) (dto.ResponseMeta, error) {
 	start := time.Now()
 	err := c.customerUseCase.DeleteCustomerById(id)

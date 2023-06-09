@@ -2,6 +2,7 @@ package entity
 
 import "time"
 
+// Struct Customer
 type Customer struct {
 	ID        uint      `gorm:"column:id; primaryKey; autoIncrement"`
 	FirstName string    `gorm:"column:first_name; index:idx_first_name;size=255"`
@@ -12,6 +13,7 @@ type Customer struct {
 	UpdatedAt time.Time `gorm:"column:updated_at;type:timestamp;default:current_timestamp;autoUpdateTime"`
 }
 
+// Freeze table
 func (Customer) TableName() string {
 	return "customer"
 }

@@ -12,10 +12,12 @@ import (
 	"gorm.io/gorm"
 )
 
+// struct request  handler customer
 type RequestHandlerCustomerStruct struct {
 	ctr CustomerControllerInterface
 }
 
+// func customer request handler db
 func RequestHandler(
 	dbCrud *gorm.DB,
 ) RequestHandlerCustomerStruct {
@@ -27,8 +29,10 @@ func RequestHandler(
 		}}
 }
 
+// validate
 var validate = validator.New()
 
+// method create customer
 func (h RequestHandlerCustomerStruct) CreateCustomer(c *gin.Context) {
 	request := CustomerBody{}
 	err := c.Bind(&request)
@@ -79,6 +83,7 @@ func (h RequestHandlerCustomerStruct) CreateCustomer(c *gin.Context) {
 	c.JSON(http.StatusCreated, res)
 }
 
+// method get customer by id
 func (h RequestHandlerCustomerStruct) GetCustomerById(c *gin.Context) {
 	customerId, err := strconv.ParseUint(c.Param("id"), 10, 64)
 	if err != nil {
@@ -100,6 +105,7 @@ func (h RequestHandlerCustomerStruct) GetCustomerById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method get all customer
 func (h RequestHandlerCustomerStruct) GetAllCustomer(c *gin.Context) {
 
 	pageStr := c.DefaultQuery("page", "1")
@@ -118,6 +124,7 @@ func (h RequestHandlerCustomerStruct) GetAllCustomer(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method update customer by id
 func (h RequestHandlerCustomerStruct) UpdateCustomerById(c *gin.Context) {
 	request := UpdateCustomerBody{}
 	err := c.Bind(&request)
@@ -182,6 +189,7 @@ func (h RequestHandlerCustomerStruct) UpdateCustomerById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method delete customer by id
 func (h RequestHandlerCustomerStruct) DeleteCustomerById(c *gin.Context) {
 	customerId, err := strconv.ParseUint(c.Param("id"), 10, 64)
 

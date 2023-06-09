@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// func auth Jwt middleware
 func Auth(c *gin.Context) {
 
 	bearer := c.GetHeader("Authorization")
@@ -17,6 +18,7 @@ func Auth(c *gin.Context) {
 
 	var tokenBearer string
 
+	//check condition token
 	if len(tokenAuth) < 2 {
 		// Header is not in the expected format, set a default token value or handle the situation
 		tokenBearer = "default_tokenBearer"
@@ -24,6 +26,7 @@ func Auth(c *gin.Context) {
 		tokenBearer = tokenAuth[1]
 	}
 
+	//validate token
 	token, err := jwt.ParseWithClaims(tokenBearer, &CustomClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(os.Getenv("ACCESS_TOKEN_JWT")), nil
 	})
@@ -33,6 +36,7 @@ func Auth(c *gin.Context) {
 		return
 	}
 
+	//condition token claims
 	if claims, ok := token.Claims.(*CustomClaims); ok && token.Valid {
 		if claims.ExpiresAt < time.Now().Unix() {
 			c.JSON(http.StatusBadRequest, dto.DefaultErrorResponseWithMessage("token expired"))
@@ -44,12 +48,16 @@ func Auth(c *gin.Context) {
 			c.Abort() // Stop execution of subsequent middleware or handlers
 			return
 		}
+		//set role
 		c.Set("role", claims.Role)
+
+		//invalid token
 	} else {
 		c.JSON(http.StatusBadRequest, dto.DefaultErrorResponseWithMessage("signature is invalid"))
 		c.Abort() // Stop execution of subsequent middleware or handlers
 		return
 	}
 
+	//next
 	c.Next()
 }

@@ -8,6 +8,8 @@ import (
 	"math"
 )
 
+// interface customer repository
+//
 //go:generate mockery --name CustomerRepoInterface
 type CustomerRepoInterface interface {
 	CreateCustomer(customer *entity.Customer) (entity.Customer, error)
@@ -17,10 +19,12 @@ type CustomerRepoInterface interface {
 	DeleteCustomerById(id uint) error
 }
 
+// struct customer
 type Customer struct {
 	db *gorm.DB
 }
 
+// func new customer
 func NewCustomer(dbCrud *gorm.DB) Customer {
 	return Customer{
 		db: dbCrud,
@@ -28,6 +32,7 @@ func NewCustomer(dbCrud *gorm.DB) Customer {
 
 }
 
+// method create customer
 func (repo Customer) CreateCustomer(customer *entity.Customer) (entity.Customer, error) {
 	var existingCustomer entity.Customer
 
@@ -45,6 +50,7 @@ func (repo Customer) CreateCustomer(customer *entity.Customer) (entity.Customer,
 	return *customer, nil
 }
 
+// method get customer by id
 func (repo Customer) GetCustomerById(id uint) (entity.Customer, error) {
 	var customer entity.Customer
 	err := repo.db.Omit("password").First(&customer, "id = ?", id).Error
@@ -54,6 +60,7 @@ func (repo Customer) GetCustomerById(id uint) (entity.Customer, error) {
 	return customer, nil
 }
 
+// get all customer
 func (repo Customer) GetAllCustomer(page uint, username string) (uint, uint, int, uint, []entity.Customer, error) {
 	var customers []entity.Customer
 	var count int64
@@ -81,6 +88,7 @@ func (repo Customer) GetAllCustomer(page uint, username string) (uint, uint, int
 	return page, limit, int(count), totalPages, customers, nil
 }
 
+// method update customer by id
 func (repo Customer) UpdateCustomerById(id uint, updateCustomer *entity.Customer) (entity.Customer, error) {
 	var findCustomerById entity.Customer
 
@@ -102,6 +110,7 @@ func (repo Customer) UpdateCustomerById(id uint, updateCustomer *entity.Customer
 	return findCustomerById, nil
 }
 
+// method delete customer by id
 func (repo Customer) DeleteCustomerById(id uint) error {
 	var customer entity.Customer
 

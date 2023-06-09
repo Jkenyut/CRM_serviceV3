@@ -13,10 +13,12 @@ import (
 	"gorm.io/gorm"
 )
 
+// struct request handler
 type RequestHandlerActorStruct struct {
 	ctr ActorControllerInterface
 }
 
+// funct request handler
 func RequestHandler(
 	dbCrud *gorm.DB,
 ) RequestHandlerActorStruct {
@@ -28,8 +30,10 @@ func RequestHandler(
 		}}
 }
 
+// validate request
 var validate = validator.New()
 
+// method creator actor
 func (h RequestHandlerActorStruct) CreateActor(c *gin.Context) {
 	roleValue, _ := c.Get("role")
 	role, _ := roleValue.(uint) // Assuming role is of type uint
@@ -80,6 +84,7 @@ func (h RequestHandlerActorStruct) CreateActor(c *gin.Context) {
 	c.JSON(http.StatusCreated, res)
 }
 
+// method get actor by id
 func (h RequestHandlerActorStruct) GetActorById(c *gin.Context) {
 	actorId, err := strconv.ParseUint(c.Param("id"), 10, 64)
 	if err != nil {
@@ -101,6 +106,7 @@ func (h RequestHandlerActorStruct) GetActorById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method get all actor
 func (h RequestHandlerActorStruct) GetAllActor(c *gin.Context) {
 
 	pageStr := c.DefaultQuery("page", "1")
@@ -119,6 +125,7 @@ func (h RequestHandlerActorStruct) GetAllActor(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method actor update by id
 func (h RequestHandlerActorStruct) UpdateActorById(c *gin.Context) {
 	roleValue, _ := c.Get("role")
 	role, _ := roleValue.(uint) // Assuming role is of type uint
@@ -189,6 +196,7 @@ func (h RequestHandlerActorStruct) UpdateActorById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method delete actor by id
 func (h RequestHandlerActorStruct) DeleteActorById(c *gin.Context) {
 	roleValue, _ := c.Get("role")
 	role, _ := roleValue.(uint) // Assuming role is of type uint
@@ -218,6 +226,7 @@ func (h RequestHandlerActorStruct) DeleteActorById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method activate actor
 func (h RequestHandlerActorStruct) ActivateActorById(c *gin.Context) {
 	roleValue, _ := c.Get("role")
 	role, _ := roleValue.(uint) // Assuming role is of type uint
@@ -243,6 +252,7 @@ func (h RequestHandlerActorStruct) ActivateActorById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method deactive actor by id
 func (h RequestHandlerActorStruct) DeactivateActorById(c *gin.Context) {
 	roleValue, _ := c.Get("role")
 	role, _ := roleValue.(uint) // Assuming role is of type uint
@@ -269,6 +279,7 @@ func (h RequestHandlerActorStruct) DeactivateActorById(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// method login actor
 func (h RequestHandlerActorStruct) LoginActor(c *gin.Context) {
 	agent := c.GetHeader("User-Agent")
 	request := ActorBody{}
@@ -301,6 +312,8 @@ func (h RequestHandlerActorStruct) LoginActor(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, res)
 }
+
+// method logout
 func (h RequestHandlerActorStruct) LogoutActor(c *gin.Context) {
 	start := time.Now()
 	c.Request.Header.Del("Authorization")
