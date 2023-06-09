@@ -2,6 +2,7 @@ package entity
 
 import "time"
 
+// struct Actor
 type Actor struct {
 	ID        uint64    `gorm:"column:id;primaryKey;autoIncrement"`
 	Username  string    `gorm:"column:username;not null;unique:username;size:255;index:idx_username_actor"`

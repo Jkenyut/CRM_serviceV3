@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : ignore" />
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : deploy">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,36 +51,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "deploy",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/INTERSHIP BRI/BOOTCAMP DIBIMBING GOLANG/crm_serviceV3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;deploy&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/INTERSHIP BRI/BOOTCAMP DIBIMBING GOLANG/crm_serviceV3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\INTERSHIP BRI\BOOTCAMP DIBIMBING GOLANG\crm_service\modules\customer" />
@@ -86,6 +88,73 @@
       <recent name="D:\INTERSHIP BRI\BOOTCAMP DIBIMBING GOLANG\crm_service\modules\actors" />
       <recent name="D:\INTERSHIP BRI\BOOTCAMP DIBIMBING GOLANG\crm_service\dto" />
     </key>
+  </component>
+  <component name="RunManager" selected="Go Test.go test modules">
+    <configuration name="TestDeleteCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="crm_serviceV3/modules/customer" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestDeleteCustomerById\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestUpdateCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="crm_serviceV3/modules/customer" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestUpdateCustomerById\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test actor" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules/actor" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="crm_service" />
+      <directory value="$PROJECT_DIR$/modules/actor" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules/customer" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="crm_service" />
+      <directory value="$PROJECT_DIR$/modules/customer" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test modules" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/modules" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.go test modules" />
+        <item itemvalue="Go Test.go test actor" />
+        <item itemvalue="Go Test.go test customer" />
+        <item itemvalue="Go Test.TestDeleteCustomerById in crm_serviceV3/modules/customer" />
+        <item itemvalue="Go Test.TestUpdateCustomerById in crm_serviceV3/modules/customer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +179,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/deploy" />
                       </list>
                     </value>
                   </entry>
@@ -123,7 +192,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : error-response.go" />
     <MESSAGE value="feat : response-meta.go" />
     <MESSAGE value="feat : init" />
     <MESSAGE value="feat : dto" />
@@ -139,9 +207,24 @@
     <MESSAGE value="fix : from mini project 2" />
     <MESSAGE value="fix : main.go" />
     <MESSAGE value="fix : ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : ignore" />
+    <MESSAGE value="fix : dependenci" />
+    <MESSAGE value="fix : mock and testing create and getactor by id" />
+    <MESSAGE value="fix : mocks customer and test usecase_actor" />
+    <MESSAGE value="feat : mock and test use_case customer" />
+    <MESSAGE value="feat : accpeted" />
+    <MESSAGE value="feat : feat to looping connect db and to migrate" />
+    <MESSAGE value="feat : ci/cd" />
+    <MESSAGE value="fix : readme.md" />
+    <MESSAGE value="fix : comment all feature" />
+    <MESSAGE value="fix : deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : deploy" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_actor.out" NAME="go test actor Coverage Results" MODIFIED="1686292685458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_modules.out" NAME="go test modules Coverage Results" MODIFIED="1686294365568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_customer.out" NAME="go test customer Coverage Results" MODIFIED="1686292652972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

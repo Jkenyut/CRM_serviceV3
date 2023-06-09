@@ -6,6 +6,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+// interface use-case actor
 type UseCaseActorInterface interface {
 	CreateActor(actor ActorBody) (entity.Actor, error)
 	GetActorById(id uint) (entity.Actor, error)
@@ -17,10 +18,12 @@ type UseCaseActorInterface interface {
 	LoginActor(actor ActorBody) (entity.Actor, error)
 }
 
+// struct actor usecase
 type actorUseCaseStruct struct {
 	actorRepository repository.ActorRepoInterface
 }
 
+// method create actor
 func (uc actorUseCaseStruct) CreateActor(actor ActorBody) (entity.Actor, error) {
 
 	hashingPassword, _ := bcrypt.GenerateFromPassword([]byte(actor.Password), 12)
@@ -36,18 +39,21 @@ func (uc actorUseCaseStruct) CreateActor(actor ActorBody) (entity.Actor, error) 
 	return createActor, nil
 }
 
+// method get actor by id
 func (uc actorUseCaseStruct) GetActorById(id uint) (entity.Actor, error) {
 	var actor entity.Actor
 	actor, err := uc.actorRepository.GetActorById(id)
 	return actor, err
 }
 
+// method all actor
 func (uc actorUseCaseStruct) GetAllActor(page uint, username string) (uint, uint, int, uint, []entity.Actor, error) {
 	var actor []entity.Actor
 	page, perPage, total, totalPages, actor, err := uc.actorRepository.GetAllActor(page, username)
 	return page, perPage, total, totalPages, actor, err
 }
 
+// method update actor by id
 func (uc actorUseCaseStruct) UpdateActorById(id uint, actor UpdateActorBody) (entity.Actor, error) {
 	hashingPassword, _ := bcrypt.GenerateFromPassword([]byte(actor.Password), 12)
 	newActor := entity.Actor{
@@ -65,21 +71,25 @@ func (uc actorUseCaseStruct) UpdateActorById(id uint, actor UpdateActorBody) (en
 	return updatedActor, nil
 }
 
+// method delete actor by id
 func (uc actorUseCaseStruct) DeleteActorById(id uint) error {
 	err := uc.actorRepository.DeleteActorById(id)
 	return err
 }
 
+// method activate by id
 func (uc actorUseCaseStruct) ActivateActorById(id uint) error {
 	err := uc.actorRepository.ActivateActorById(id)
 	return err
 }
 
+// method deactive by id
 func (uc actorUseCaseStruct) DeactivateActorById(id uint) error {
 	err := uc.actorRepository.DeactivateActorById(id)
 	return err
 }
 
+// method login actor
 func (uc actorUseCaseStruct) LoginActor(actor ActorBody) (entity.Actor, error) {
 	NewActor := entity.Actor{
 		Username: actor.Username,

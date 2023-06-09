@@ -6,10 +6,12 @@ import (
 	"gorm.io/gorm"
 )
 
+// struct route customer
 type RouterCustomerStruct struct {
 	customerRequestHandler RequestHandlerCustomerStruct
 }
 
+// func new router
 func NewRouter(
 	dbCrud *gorm.DB,
 ) RouterCustomerStruct {
@@ -20,6 +22,7 @@ func NewRouter(
 	}
 }
 
+// func handle route customer
 func (r RouterCustomerStruct) Handle(router *gin.Engine) {
 	basepath := "v1/customer"
 	customerRouter := router.Group(basepath, middleware.Auth)

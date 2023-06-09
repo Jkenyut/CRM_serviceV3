@@ -1,12 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Jun 04, 2023 at 07:58 AM
--- Server version: 8.0.30
--- PHP Version: 8.1.10
-
+-- +migrate Up
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -43,12 +35,7 @@ CREATE TABLE `actors` (
 --
 
 INSERT INTO `actors` (`id`, `username`, `password`, `role_id`, `verified`, `active`, `created_at`, `updated_at`) VALUES
-(1, 'superadmin', '$2a$12$26EAzIyDQ5YZKE6pAeHKoeugjQ98lkXNPOEFjJikPmQReEMK4snoW', 1, 'true', 'true', '2023-06-02 04:41:18', '2023-06-04 05:18:58'),
-(3, 'be', '$2a$12$LLGqut.2ghWEIq7KbqmBgexbC6tys1S52GE7dqghRx/Bn8cvaen2u', 2, 'true', 'true', '2023-06-02 07:33:07', '2023-06-03 09:39:09'),
-(4, 'se', '$2a$12$3Cmx2UK/HVCp1kg0z2yLL.V3DcMN/BoBN4jYhjf1I4J3gOHlARDe6', 2, 'false', 'false', '2023-06-02 11:07:55', '2023-06-03 09:17:29'),
-(6, 's', '$2a$12$jHCAyoN6vT9yyDSzagl6BOl0MbgdICn1fz1GqW3dRlNuhZvegjDvO', 2, 'false', 'false', '2023-06-02 11:12:35', '2023-06-02 11:12:35'),
-(9, 'd', '$2a$12$o5HvC9FBOTQ7Yc/Eyac2HOR36JGnWUMIwipK2YfV6pG25UVK2/v.e', 2, 'false', 'false', '2023-06-04 07:16:11', '2023-06-04 07:16:11');
-
+(1, 'superadmin', '$2a$12$26EAzIyDQ5YZKE6pAeHKoeugjQ98lkXNPOEFjJikPmQReEMK4snoW', 1, 'true', 'true', '2023-06-02 04:41:18', '2023-06-04 05:18:58');
 -- --------------------------------------------------------
 
 --
@@ -85,18 +72,6 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `avatar`, `created_at`, `updated_at`) VALUES
-(5, 'Michael', 'Lawson', 'michael.lawson@reqres.in', 'https://reqres.in/img/faces/7-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19'),
-(6, 'Lindsay', 'Ferguson', 'lindsay.ferguson@reqres.in', 'https://reqres.in/img/faces/8-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19'),
-(7, 'Tobias', 'Funke', 'tobias.funke@reqres.in', 'https://reqres.in/img/faces/9-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19'),
-(8, 'Byron', 'Fields', 'byron.fields@reqres.in', 'https://reqres.in/img/faces/10-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19'),
-(9, 'George', 'Edwards', 'george.edwards@reqres.in', 'https://reqres.in/img/faces/11-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19'),
-(10, 'Rachel', 'Howell', 'rachel.howell@reqres.in', 'https://reqres.in/img/faces/12-image.jpg', '2023-06-04 03:55:19', '2023-06-04 03:55:19');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `register_approval`
@@ -113,13 +88,7 @@ CREATE TABLE `register_approval` (
 -- Dumping data for table `register_approval`
 --
 
-INSERT INTO `register_approval` (`id`, `admin_id`, `super_admin_id`, `status`) VALUES
-(3, 3, 1, 'activate'),
-(4, 4, 1, 'deactivate'),
-(5, 6, 1, 'deactivate'),
-(8, 9, 1, 'deactivate');
 
---
 -- Indexes for dumped tables
 --
 
@@ -206,3 +175,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- +migrate Down
+DROP TABLE IF EXISTS `actors`;

@@ -1,11 +1,13 @@
 
-## Run Project
+## Run Project with manual
 
 0. Link API postman [postman](https://documenter.getpostman.com/view/16127230/2s93sW9ayD)
 1. Dump Sql extension to your mysql database because program disable auto-migrate
 2. Build enviroment ```.env```
 ```
-CONNECT_DB =            // your uri database
+DB_HOST =               // DB HOST
+CONNECT_DB =            // your creadentials database
+CONNECT_DB_LAST         // your database name
 HOUR =                  // string in number to hour
 ACCESS_TOKEN_JWT =      // secret-jwt
 ```
@@ -14,12 +16,30 @@ ACCESS_TOKEN_JWT =      // secret-jwt
    go mod download 
    go mod tidy
 ```
-4. Run program
+4. Run test
+```azure
+go test ./modules/actor
+go test ./modules/customer
+```
+5. Run program
 ```azure
 go run main.go
 ```
 
-5. API URI
+## Run Project with Docker-compose
+
+1. Run Build Docker-Compose
+```azure
+docker-compose build
+```
+2. Run Docker-Compose
+```azure
+docker-compose up -d
+```
+## ! Note
+you can edit workflows ci/cd in ```.github/workflows/docker.yml```
+
+## API URI
 ```
 
  POST   /v1/actor/register        --> crm_service/modules/actor.RequestHandlerActorStruct.CreateActor-fm (10 handlers)

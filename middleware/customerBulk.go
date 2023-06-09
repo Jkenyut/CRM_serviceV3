@@ -9,6 +9,7 @@ import (
 	"log"
 )
 
+// build bulk customer from api
 func CustomerBulk(c *gin.Context) {
 	db := db2.GormMysql()
 	url := "https://reqres.in/api/users?page=2"
@@ -33,7 +34,7 @@ func CustomerBulk(c *gin.Context) {
 		err := db.First(&existingCustomer, "email = ?", customer.Email).Error
 		if err == nil {
 			// FirstName already exists, return an error
-			continue
+			continue //continue if already exist
 		}
 		// Email does not exist, proceed with creating the customer
 		db.Table("customer").Create(&entity.Customer{FirstName: customer.FirstName, LastName: customer.LastName, Email: customer.Email, Avatar: customer.Avatar})

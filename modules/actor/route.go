@@ -6,10 +6,12 @@ import (
 	"gorm.io/gorm"
 )
 
+// struct route actor
 type RouterActorStruct struct {
 	actorRequestHandler RequestHandlerActorStruct
 }
 
+// func DB
 func NewRouter(
 	dbCrud *gorm.DB,
 ) RouterActorStruct {
@@ -20,6 +22,7 @@ func NewRouter(
 	}
 }
 
+// func Handle actor
 func (r RouterActorStruct) Handle(router *gin.Engine) {
 	basepath := "v1/actor"
 

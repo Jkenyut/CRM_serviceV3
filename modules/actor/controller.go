@@ -11,6 +11,7 @@ import (
 	"time"
 )
 
+// interface actor-controller
 type ActorControllerInterface interface {
 	CreateActor(req ActorBody) (any, error)
 	GetActorById(id uint) (FindActor, error)
@@ -22,10 +23,12 @@ type ActorControllerInterface interface {
 	LoginActor(req ActorBody, agent string) (SuccessLogin, error)
 }
 
+// struct actor controller
 type actorControllerStruct struct {
 	actorUseCase UseCaseActorInterface
 }
 
+// method create actor
 func (c actorControllerStruct) CreateActor(req ActorBody) (any, error) {
 	start := time.Now()
 	actor, err := c.actorUseCase.CreateActor(req)
@@ -47,6 +50,7 @@ func (c actorControllerStruct) CreateActor(req ActorBody) (any, error) {
 	return res, nil
 }
 
+// method get actor by id
 func (c actorControllerStruct) GetActorById(id uint) (FindActor, error) {
 	start := time.Now()
 	var res FindActor
@@ -65,6 +69,7 @@ func (c actorControllerStruct) GetActorById(id uint) (FindActor, error) {
 	return res, nil
 }
 
+// mthod get all actor
 func (c actorControllerStruct) GetAllActor(page uint, usernameStr string) (FindAllActor, error) {
 	start := time.Now()
 	page, perPage, total, totalPages, actorEntities, err := c.actorUseCase.GetAllActor(page, usernameStr)
@@ -95,6 +100,7 @@ func (c actorControllerStruct) GetAllActor(page uint, usernameStr string) (FindA
 	return res, nil
 }
 
+// method update actor by id
 func (c actorControllerStruct) UpdateById(id uint, req UpdateActorBody) (FindActor, error) {
 	start := time.Now()
 	actor, err := c.actorUseCase.UpdateActorById(id, req)
@@ -114,6 +120,7 @@ func (c actorControllerStruct) UpdateById(id uint, req UpdateActorBody) (FindAct
 	return res, nil
 }
 
+// method delete actor by id
 func (c actorControllerStruct) DeleteActorById(id uint) (dto.ResponseMeta, error) {
 	start := time.Now()
 	err := c.actorUseCase.DeleteActorById(id)
@@ -126,6 +133,7 @@ func (c actorControllerStruct) DeleteActorById(id uint) (dto.ResponseMeta, error
 	return res, err
 }
 
+// method activate register actor by id
 func (c actorControllerStruct) ActivateActorById(id uint) (dto.ResponseMeta, error) {
 	start := time.Now()
 	err := c.actorUseCase.ActivateActorById(id)
@@ -138,6 +146,7 @@ func (c actorControllerStruct) ActivateActorById(id uint) (dto.ResponseMeta, err
 	return res, err
 }
 
+// method deactivate actor by id
 func (c actorControllerStruct) DeactivateActorById(id uint) (dto.ResponseMeta, error) {
 	start := time.Now()
 	err := c.actorUseCase.DeactivateActorById(id)
@@ -150,6 +159,7 @@ func (c actorControllerStruct) DeactivateActorById(id uint) (dto.ResponseMeta, e
 	return res, err
 }
 
+// method login actor
 func (c actorControllerStruct) LoginActor(req ActorBody, agent string) (SuccessLogin, error) {
 	start := time.Now()
 	actor, err := c.actorUseCase.LoginActor(req)
