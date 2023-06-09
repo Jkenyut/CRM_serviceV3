@@ -11,6 +11,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	migrate "github.com/rubenv/sql-migrate"
 	"time"
 )
 
@@ -18,6 +19,23 @@ func main() {
 	//main function
 	_ = godotenv.Load()
 	db := db2.GormMysql()
+	//path := filepath.Join("crm_service.sql")
+	//c, err := ioutil.ReadFile(path)
+	//if err != nil {
+	//	fmt.Println("error")
+	//}
+	//sql := string(c)
+	//err = db.Exec(sql).Error
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
+	m := &migrate.FileMigrationSource{Dir: "."}
+	sql, _ := db.DB()
+	n, err := migrate.Exec(sql, "mysql", m, migrate.Up)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(n)
 	router := gin.New()
 
 	router.Use(cors.Default())

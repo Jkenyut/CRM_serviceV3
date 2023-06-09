@@ -31,7 +31,8 @@ func RequestHandler(
 var validate = validator.New()
 
 func (h RequestHandlerActorStruct) CreateActor(c *gin.Context) {
-	role, _ := c.Get("role")
+	roleValue, _ := c.Get("role")
+	role, _ := roleValue.(uint) // Assuming role is of type uint
 	if role != 1 {
 		c.JSON(http.StatusUnauthorized, dto.DefaultErrorResponseWithMessage("Not Authorization"))
 		return
@@ -119,7 +120,8 @@ func (h RequestHandlerActorStruct) GetAllActor(c *gin.Context) {
 }
 
 func (h RequestHandlerActorStruct) UpdateActorById(c *gin.Context) {
-	role, _ := c.Get("role")
+	roleValue, _ := c.Get("role")
+	role, _ := roleValue.(uint) // Assuming role is of type uint
 	if role != 1 {
 		c.JSON(http.StatusUnauthorized, dto.DefaultErrorResponseWithMessage("Not Authorization"))
 		return
@@ -188,7 +190,8 @@ func (h RequestHandlerActorStruct) UpdateActorById(c *gin.Context) {
 }
 
 func (h RequestHandlerActorStruct) DeleteActorById(c *gin.Context) {
-	role, _ := c.Get("role")
+	roleValue, _ := c.Get("role")
+	role, _ := roleValue.(uint) // Assuming role is of type uint
 	if role != 1 {
 		c.JSON(http.StatusUnauthorized, dto.DefaultErrorResponseWithMessage("Not Authorization"))
 		return
@@ -216,8 +219,8 @@ func (h RequestHandlerActorStruct) DeleteActorById(c *gin.Context) {
 }
 
 func (h RequestHandlerActorStruct) ActivateActorById(c *gin.Context) {
-	role, _ := c.Get("role")
-
+	roleValue, _ := c.Get("role")
+	role, _ := roleValue.(uint) // Assuming role is of type uint
 	if role != 1 {
 		c.JSON(http.StatusUnauthorized, dto.DefaultErrorResponseWithMessage("Not Authorization"))
 		return
@@ -241,7 +244,8 @@ func (h RequestHandlerActorStruct) ActivateActorById(c *gin.Context) {
 }
 
 func (h RequestHandlerActorStruct) DeactivateActorById(c *gin.Context) {
-	role, _ := c.Get("role")
+	roleValue, _ := c.Get("role")
+	role, _ := roleValue.(uint) // Assuming role is of type uint
 	if role != 1 {
 		c.JSON(http.StatusUnauthorized, dto.DefaultErrorResponseWithMessage("Not Authorization"))
 		return
