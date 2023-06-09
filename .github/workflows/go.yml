@@ -31,12 +31,10 @@ jobs:
       
     - name: Test Actor
       run: go test -v ./modules/actor
-
       
     - name: Test Customer
       run: go test -v ./modules/customer
 
-      
     - name: Build Docker Compose
       run: docker-compose build
     
