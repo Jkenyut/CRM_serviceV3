@@ -30,6 +30,6 @@ jobs:
       run: go test -v ./modules/customer
 
     - name: Install Docker Compose
-      uses: isbang/compose-action@1.4.1
+      uses: isbang/compose-action@v1.4.1
       with:
         compose-file: "./docker-compose.yaml"
