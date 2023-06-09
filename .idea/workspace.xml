@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : readme.md">
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : comment all feature">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/error-response.go" beforeDir="false" afterPath="$PROJECT_DIR$/dto/error-response.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/response-meta.go" beforeDir="false" afterPath="$PROJECT_DIR$/dto/response-meta.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/actor.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/actor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/customer.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/customer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/rate-limiter.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/rate-limiter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/register_approval.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/register_approval.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/customerBulk.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/customerBulk.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/dto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/dto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/request_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/request_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/use_case.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/use_case.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/use_case_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/use_case_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/dto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/request_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/request_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/use_case.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/use_case.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/customer/use_case_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/customer/use_case_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/actor.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/actor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/customer.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/customer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/db/gorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db/gorm.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +180,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="deploy" />
+                        <option value="origin/deploy" />
                       </list>
                     </value>
                   </entry>
@@ -241,7 +217,8 @@
     <MESSAGE value="feat : feat to looping connect db and to migrate" />
     <MESSAGE value="feat : ci/cd" />
     <MESSAGE value="fix : readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : readme.md" />
+    <MESSAGE value="fix : comment all feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : comment all feature" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
