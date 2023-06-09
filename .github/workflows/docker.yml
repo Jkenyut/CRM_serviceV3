@@ -34,5 +34,8 @@ jobs:
       with:
         compose-file: "./docker-compose.yaml"
 
+    - name: build docker-compose
+      run : docker-compose build
+
     - name: Run docker-compose
       run : docker-compose up -d

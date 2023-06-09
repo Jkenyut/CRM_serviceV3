@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : comment all feature">
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="fix : deploy">
       <change beforePath="$PROJECT_DIR$/.github/workflows/docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +192,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : error-response.go" />
     <MESSAGE value="feat : response-meta.go" />
     <MESSAGE value="feat : init" />
     <MESSAGE value="feat : dto" />
@@ -218,7 +216,8 @@
     <MESSAGE value="feat : ci/cd" />
     <MESSAGE value="fix : readme.md" />
     <MESSAGE value="fix : comment all feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : comment all feature" />
+    <MESSAGE value="fix : deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : deploy" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
