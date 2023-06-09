@@ -34,9 +34,6 @@ jobs:
       
     - name: Test Customer
       run: go test -v ./modules/customer
-
-    - name: Build Docker Compose
-      run: docker-compose build
     
     - name: Build Docker Run
       run: docker-compose up -d
