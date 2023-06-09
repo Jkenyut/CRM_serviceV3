@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="feat : accpeted">
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="feat : feat to looping connect db and to migrate">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/docker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/db/gorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db/gorm.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <recent name="D:\INTERSHIP BRI\BOOTCAMP DIBIMBING GOLANG\crm_service\dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test actor">
+  <component name="RunManager" selected="Go Test.go test modules">
     <configuration name="TestDeleteCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="crm_serviceV3" />
       <working_directory value="$PROJECT_DIR$/modules/customer" />
@@ -101,18 +101,6 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestDeleteCustomerById\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestGetAllCustomer in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="crm_serviceV3" />
-      <working_directory value="$PROJECT_DIR$/modules/customer" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="crm_serviceV3/modules/customer" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestGetAllCustomer\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestUpdateCustomerById in crm_serviceV3/modules/customer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -149,13 +137,23 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="go test modules" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="crm_serviceV3" />
+      <working_directory value="$PROJECT_DIR$/modules" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/modules" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test modules" />
         <item itemvalue="Go Test.go test actor" />
         <item itemvalue="Go Test.go test customer" />
         <item itemvalue="Go Test.TestDeleteCustomerById in crm_serviceV3/modules/customer" />
         <item itemvalue="Go Test.TestUpdateCustomerById in crm_serviceV3/modules/customer" />
-        <item itemvalue="Go Test.TestGetAllCustomer in crm_serviceV3/modules/customer" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +180,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="deploy" />
+                        <option value="origin/deploy" />
                       </list>
                     </value>
                   </entry>
@@ -216,13 +214,15 @@
     <MESSAGE value="fix : mocks customer and test usecase_actor" />
     <MESSAGE value="feat : mock and test use_case customer" />
     <MESSAGE value="feat : accpeted" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : accpeted" />
+    <MESSAGE value="feat : feat to looping connect db and to migrate" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : feat to looping connect db and to migrate" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_actor.out" NAME="go test actor Coverage Results" MODIFIED="1686292685458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_modules.out" NAME="go test modules Coverage Results" MODIFIED="1686294365568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_customer.out" NAME="go test customer Coverage Results" MODIFIED="1686292652972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
