@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="feat : mock and test use_case customer">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2e9f8e5-3080-4519-b154-4e3c22199a12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b2e9f8e5-3080-4519-b154-4e3c22199a12.xml" afterDir="false" />
+    <list default="true" id="6d130043-8d78-48ef-b635-3c0c544ac737" name="Changes" comment="feat : accpeted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm_service.sql" beforeDir="false" afterPath="$PROJECT_DIR$/crm_service.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/actor/request_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/actor/request_handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/db/gorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db/gorm.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +182,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/deploy" />
+                        <option value="deploy" />
                       </list>
                     </value>
                   </entry>
@@ -224,13 +215,14 @@
     <MESSAGE value="fix : mock and testing create and getactor by id" />
     <MESSAGE value="fix : mocks customer and test usecase_actor" />
     <MESSAGE value="feat : mock and test use_case customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : mock and test use_case customer" />
+    <MESSAGE value="feat : accpeted" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : accpeted" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_actor.out" NAME="go test actor Coverage Results" MODIFIED="1686274548348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_customer.out" NAME="go test customer Coverage Results" MODIFIED="1686212368987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_actor.out" NAME="go test actor Coverage Results" MODIFIED="1686292685458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/crm_serviceV3$go_test_customer.out" NAME="go test customer Coverage Results" MODIFIED="1686292652972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
